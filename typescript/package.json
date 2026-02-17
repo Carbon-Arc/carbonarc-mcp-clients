@@ -1,0 +1,16 @@
+{
+  "name": "carbonarc-mcp-client-typescript",
+  "version": "1.0.0",
+  "description": "CarbonArc MCP Client — TypeScript Quick Start",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx mcp-example.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0"
+  }
+}

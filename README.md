@@ -6,7 +6,7 @@ using the **official Model Context Protocol SDKs**.
 
 Each example follows the same pattern:
 
-1. Connect to `https://mcp.carbonarc.co/mcp/` over Streamable HTTP
+1. Connect to `https://mcp.carbonarc.co/` over Streamable HTTP
 2. Authenticate via OAuth 2.0 (browser opens automatically where supported)
 3. Discover available tools
 4. Call `search_entities` with `"Walmart"` as a quick smoke test

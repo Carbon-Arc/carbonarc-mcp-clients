@@ -26,7 +26,7 @@ import (
 )
 
 const (
-	mcpServerURL = "https://mcp.carbonarc.co/mcp/"
+	mcpServerURL = "https://mcp.carbonarc.co/"
 	resourceURL  = "https://mcp.carbonarc.co"
 	callbackPort = 8092
 )

@@ -18,7 +18,7 @@ import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/
 import { UnauthorizedError } from "@modelcontextprotocol/sdk/client/auth.js";
 import { BrowserOAuthProvider, waitForAuthCode } from "./oauth-helper.js";
 
-const MCP_SERVER_URL = "https://mcp.carbonarc.co/mcp/";
+const MCP_SERVER_URL = "https://mcp.carbonarc.co/";
 const CALLBACK_PORT = 8090;
 
 async function main() {

@@ -16,7 +16,7 @@ from fastmcp.client.auth import OAuth
 from langchain_mcp_adapters.tools import load_mcp_tools
 
 
-MCP_SERVER_URL = "https://mcp.carbonarc.co/mcp/"
+MCP_SERVER_URL = "https://mcp.carbonarc.co/"
 
 
 async def main():

@@ -1,7 +1,7 @@
 # CarbonArc MCP Client Examples
 
 Minimal, self-contained MCP client examples showing how to connect to the
-[CarbonArc](https://carbonarc.co) MCP server from every popular language
+[CarbonArc](http://docs.carbonarc.ai/) MCP server from every popular language
 using the **official Model Context Protocol SDKs**.
 
 Each example follows the same pattern:
@@ -73,4 +73,4 @@ All three client examples implement the full browser-based OAuth flow.
 
 - [Model Context Protocol Specification](https://modelcontextprotocol.io/specification/latest/)
 - [MCP SDKs Overview](https://modelcontextprotocol.io/docs/sdk)
-- [CarbonArc Documentation](https://carbonarc.co)
+- [CarbonArc Documentation](http://docs.carbonarc.ai/)

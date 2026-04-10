@@ -45,7 +45,7 @@ npx tsx mcp-example.ts
 ## Go
 
 Uses the [official MCP Go SDK](https://github.com/modelcontextprotocol/go-sdk)
-(`v1.3.0+`).
+(`v1.5.0+`). Requires **Go 1.25+**.
 
 ```bash
 cd go

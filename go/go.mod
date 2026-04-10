@@ -3,7 +3,7 @@ module carbonarc-mcp-client-go
 go 1.23.0
 
 require (
-	github.com/modelcontextprotocol/go-sdk v1.3.0
+	github.com/modelcontextprotocol/go-sdk v1.5.0
 	golang.org/x/oauth2 v0.30.0
 )
 

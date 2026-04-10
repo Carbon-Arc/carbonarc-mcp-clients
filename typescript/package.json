@@ -7,7 +7,7 @@
     "start": "npx tsx mcp-example.ts"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.27.1"
+    "@modelcontextprotocol/sdk": "^1.12.1"
   },
   "devDependencies": {
     "tsx": "^4.19.0",

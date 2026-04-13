@@ -6,7 +6,7 @@ using the **official Model Context Protocol SDKs**.
 
 Each example follows the same pattern:
 
-1. Connect to `https://mcp.carbonarc.co/` over Streamable HTTP
+1. Connect to `https://mcp.carbonarc.ai/` over Streamable HTTP
 2. Authenticate via OAuth 2.0 (browser opens automatically where supported)
 3. Discover available tools
 4. Call `search_entities` with `"Walmart"` as a quick smoke test
@@ -45,7 +45,7 @@ npx tsx mcp-example.ts
 ## Go
 
 Uses the [official MCP Go SDK](https://github.com/modelcontextprotocol/go-sdk)
-(`v1.3.0+`).
+(`v1.5.0+`). Requires **Go 1.25+**.
 
 ```bash
 cd go
@@ -68,6 +68,17 @@ handle this by:
 5. **Exchanging** the code for an access token.
 
 All three client examples implement the full browser-based OAuth flow.
+
+## Security
+
+These examples are **minimal quickstarts** designed to demonstrate MCP connectivity. They store OAuth tokens in memory for the duration of the script and do **not** include:
+
+- Token encryption at rest
+- Audit logging
+- Rate limiting
+- Secret scanning or rotation
+
+For production-grade security patterns — including AES-256-GCM token encryption, SOC 2 controls mapping, and reference implementations for AWS Secrets Manager, GCP Secret Manager, Azure Key Vault, and HashiCorp Vault — see the [Carbon Arc Partnership Examples](https://github.com/Carbon-Arc/carbonarc-partnership-examples) repository, specifically [embedded-ca-user/SECURITY.md](https://github.com/Carbon-Arc/carbonarc-partnership-examples/blob/main/embedded-ca-user/SECURITY.md).
 
 ## Further Reading
 

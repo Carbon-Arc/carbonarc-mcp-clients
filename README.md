@@ -17,7 +17,7 @@ Each example follows the same pattern:
 
 | Language | Directory | SDK | Transport |
 |---|---|---|---|
-| **Python** | [`python/`](python/) | `fastmcp` + `langchain-mcp-adapters` | Streamable HTTP |
+| **Python** | [`python/`](python/) | `fastmcp` | Streamable HTTP |
 | **TypeScript / Node.js** | [`typescript/`](typescript/) | `@modelcontextprotocol/sdk` | `StreamableHTTPClientTransport` |
 | **Go** | [`go/`](go/) | `modelcontextprotocol/go-sdk` | `StreamableClientTransport` |
 

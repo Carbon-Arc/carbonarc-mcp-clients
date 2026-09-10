@@ -2,7 +2,7 @@
 CarbonArc MCP Client — Python Quick Start
 ==========================================
 
-Connect to the CarbonArc MCP server using langchain-mcp-adapters,
+Connect to the CarbonArc MCP server using fastmcp,
 authenticate via OAuth 2.0, and discover available tools.
 
 Run:
@@ -13,7 +13,6 @@ import asyncio
 
 from fastmcp import Client
 from fastmcp.client.auth import OAuth
-from langchain_mcp_adapters.tools import load_mcp_tools
 
 
 MCP_SERVER_URL = "https://mcp.carbonarc.ai/"
@@ -24,19 +23,28 @@ async def main():
     oauth = OAuth(MCP_SERVER_URL, client_name="CarbonArc MCP Client Example")
 
     async with Client(MCP_SERVER_URL, auth=oauth) as client:
-        # Load tools as LangChain-compatible tools
-        tools = await load_mcp_tools(client.session)
+        # Discover tools
+        tools = await client.list_tools()
 
         print(f"\nDiscovered {len(tools)} tool(s):\n")
         for tool in tools:
-            desc = tool.description.split("\n")[0]
+            desc = (tool.description or "").split("\n")[0]
             print(f"  • {tool.name} — {desc}")
 
         # Test: search for "Walmart"
-        search_tool = next(t for t in tools if t.name == "search_entities")
         print('\nSearching for Walmart\n')
-        result = await search_tool.ainvoke({"query": "Walmart"})
-        print(result)
+        result = await client.call_tool("search_entities", {"query": "Walmart"})
+
+        # `.content` is the wire format every MCP SDK returns — a list of
+        # content blocks. Use it when you want the human-readable rendering.
+        for block in result.content:
+            if block.type == "text":
+                print(block.text)
+
+        # `.data` is the same response deserialized into Python objects, and is
+        # None for tools that declare no structured output. Prefer it in code.
+        if result.data is not None:
+            print(f"\nStructured: {result.data!r}")
 
 
 if __name__ == "__main__":

@@ -4,8 +4,7 @@ version = "1.0.0"
 description = "CarbonArc MCP Client — Python Quick Start"
 requires-python = ">=3.10"
 dependencies = [
-    "langchain-mcp-adapters",
-    "fastmcp",
+    "fastmcp>=4",
 ]
 
 [project.scripts]
